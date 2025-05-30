@@ -1,3 +1,13 @@
 sylius_admin:
     resource: "@SyliusAdminBundle/Resources/config/routing.yml"
     prefix: '/%sylius_admin.path_name%'
+
+sylius_admin_brand:
+    resource: |
+        alias: sylius.brand
+        section: admin
+        templates: "@SyliusAdmin\\shared\\crud"
+        redirect: update
+        grid: sylius_admin_brand
+    type: sylius.resource
+    prefix: '/%sylius_admin.path_name%'
